@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/fontawesome/css/fontawesome.min.css">
+    <title>Transaction</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Transaction-Manager</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Transaction
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="addTransaction.html">Add</a>
+                    <a class="dropdown-item" href="updateTransaction.html">Update</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="addcategory.html">Add Category</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="./categories.html">Category</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Dividing The Division into two -->
+<div class="row justify-content-md-center mt-5 mr-3">
+    <div class="col-md-5 text-center form" id="list_div">
+        <div class="h5 pb-3">List of Categories</div>
+        <div id="accordion" class="p-1">
+
+        </div>
+    </div>
+
+    <div class="col-md-5" id="form_div">
+        <form>
+            <form action="http://localhost:8000/category" method="POST">
+                <div class="p-1 h5">Update Here</div>
+                <div class="form-group">
+                    <label for="name_holder" class="m-auto p-2">Category Name</label>
+                    <input name = 'name' type="text" class="form-control" id="name_holder" placeholder="Grocery">
+                </div>
+
+                <div class="form-group">
+                    <label for="description_holder" class="m-auto p-2">Description</label>
+                    <textarea name="description" class="form-control" id="description_holder" rows="3" placeholder="Description of the Groceries"></textarea>
+                </div>
+                <button type="submit" id="update-category" class="btn btn-success">Submit</button>
+            </form>
+        </form>
+    </div>s
+</div>
+
+<div style="display: none" hidden>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/category/categories.js"></script>
+</div>
+
+</body>
+</html>

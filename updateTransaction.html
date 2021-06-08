@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/fontawesome/css/fontawesome.min.css">
+    <title>Update Transaction</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Transaction-Manager</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item active dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Transaction
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="addTransaction.html">Add</a>
+                    <a class="dropdown-item active" href="./updateTransaction.html">Update</a>
+                </div>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link " href="addcategory.html">Add Category</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link " href="categories.html">Category</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="row mt-5 justify-content-md-center">
+    <div class="col-md-6 p-2">
+        <div class="h5 text-center pb-2">List Of Transaction</div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">Category</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Description</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody id="data_table_body">
+
+            </tbody>
+
+        </table>
+    </div>
+    <div class="col-md-4 p-2">
+        <form class="text-center ml-auto mr-auto">
+            <div class="h4 text-center mb-3">Transaction Update Form</div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="category">Category</span>
+                <select type="number" class="form-control" placeholder=5000 aria-label="category" aria-describedby="category" name="category" id="category_select">
+                    <option value="">Please Select a Category</option>
+                </select>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Amount [Rs.]</span>
+                <input type="number" placeholder=5000 class="form-control" aria-label="Amount" name="amount" id="amount">
+                <span class="input-group-text">.00</span>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Description</span>
+                <textarea class="form-control" aria-label="With textarea" name="description" id="description"></textarea>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="type" name="isExpense">Category</span>
+                <select type="number" class="form-control" placeholder='Select One' aria-label="category" aria-describedby="category" name="type">
+                    <option value=true>Expense</option>
+                    <option value=false>Income</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-4" id="submitButton">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div style="display: none">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/transaction/updateTrans.js"></script>
+</div>
+
+</body>
+</html>

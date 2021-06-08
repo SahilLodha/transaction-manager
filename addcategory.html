@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendors/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/addcategory.css">
+    <title>Transaction</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Transaction-Manager</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Transaction
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item active" href="addTransaction.html">Add</a>
+                    <a class="dropdown-item" href="updateTransaction.html">Update</a>
+                </div>
+            </li>
+
+            <li class="nav-item ">
+                <a class="nav-link active" href="addcategory.html">Add Category</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link " href="categories.html">Category</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Form to add a Transaction -->
+<div class="col-md-4 p-5 m-auto formCustom">
+    <form action="http://localhost:8000/category" method="POST">
+        <div class="p-1"><h4>Add Category</h4></div>
+        <div class="form-group">
+            <label for="name" class="m-auto p-2">Category Name</label>
+            <input name = 'name' type="text" class="form-control" id="name" placeholder="Grocery">
+        </div>
+
+        <div class="form-group">
+            <label for="description" class="m-auto p-2">Description</label>
+            <textarea name="description" class="form-control" id="description" rows="3" placeholder="Description of the Groceries"></textarea>
+        </div>
+        <button type="submit" id="add-category" class="btn btn-success">Submit</button>
+    </form>
+
+</div>
+<!-- End Of Form-->
+<!-- Importing Script Files -->
+<div style="display: none">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/category/add_category.js"></script>
+</div>
+
+</body>
+</html>
